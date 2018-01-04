@@ -4,10 +4,6 @@ import './App.css';
 import { Header, Button, Segment, Icon, Container } from 'semantic-ui-react';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

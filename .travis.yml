@@ -10,7 +10,7 @@ install:
   - npm install
 before_script:
   - export CI=false
-script: npm build
+script: react-scripts build
 deploy:
   provider: pages
   local_dir: ${TRAVIS_BUILD_DIR}/build

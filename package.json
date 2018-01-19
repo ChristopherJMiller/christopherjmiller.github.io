@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-particles-js": "^2.1.0",
     "semantic-ui-css": "^2.2.10",
     "semantic-ui-react": "^0.68.4"
   },

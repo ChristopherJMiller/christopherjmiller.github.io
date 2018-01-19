@@ -3,10 +3,32 @@ import './App.css';
 
 import { Header, Button, Segment, Icon, Container } from 'semantic-ui-react';
 
+import Particles from 'react-particles-js';
+
 class App extends Component {
   render() {
     return (
       <div>
+        <Particles
+          className="particles"
+          params={{
+            particles: {
+              color: {
+                value: '#000000'
+              },
+              number: {
+                value: 100
+              },
+              line_linked: {
+                shadow: {
+                  enable: true,
+                  color: "#000000",
+                  blur: 5
+                }
+              }
+            }
+          }}
+        />
         <Header as='h1' content={"Hi, I'm Chris"} subheader={"I Make Things With Code"} textAlign={"center"}/>
         <Segment basic textAlign="center">
           <Button color='github' as='a' href='https://github.com/ChristopherJMiller'>

@@ -7,7 +7,6 @@ import {Card, CardTitle, CardActions, CardText} from 'material-ui/Card';
 import Chip from 'material-ui/Chip';
 import {blue300, indigo300, red400, grey500, yellow600} from 'material-ui/styles/colors';
 import RaisedButton from 'material-ui/RaisedButton';
-import FontIcon from 'material-ui/FontIcon';
 
 
 

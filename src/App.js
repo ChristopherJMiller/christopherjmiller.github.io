@@ -21,7 +21,7 @@ class App extends Component {
             zDepth={2}
             style={{position: 'fixed'}}
           />
-          <div className="row center-md">
+          <div className="row center-xs">
             <Card className="col-md-8 col-sm-12 card-margins">
               <CardTitle title="Hi, I'm Chris" subtitle="I Make Things with Code" />
               <CardText>

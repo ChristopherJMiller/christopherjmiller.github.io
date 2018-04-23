@@ -1,11 +1,16 @@
 .card-margins {
-  margin-top: 5em;
+  margin-top: 7em;
   margin-bottom: 5em;
 }
 
 .card-margins-small {
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.card-group {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .chip-wrap {

@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import {Card, CardTitle, CardActions, CardText} from 'material-ui/Card';
 import Chip from 'material-ui/Chip';
-import {purple100, blue300, indigo300, cyan700, red400, grey500, yellow600, blueGrey200} from 'material-ui/styles/colors';
+import {purple100, blue300, indigo300, cyan700, red400, grey500, yellow600, blueGrey200, blue800, green500} from 'material-ui/styles/colors';
 import RaisedButton from 'material-ui/RaisedButton';
 import FontIcon from 'material-ui/FontIcon';
 import IconMenu from 'material-ui/IconMenu';
@@ -46,24 +46,68 @@ class App extends Component {
               </CardText>
             </Card>
 
-            <h1 className="col-md-8 card-margins-small">Current Projects</h1>
+            <h1 className="col-md-8 card-margins-small">Projects</h1>
+
 
             <Card className="col-md-5 col-sm-12 card-margins-small card-group">
-              <CardTitle title="Lakewood Leaders Website" subtitle="Community Service Management" />
+              <CardTitle title="ArduinoGuitarHero" subtitle="Overkill way to play Clone Hero." />
               <CardText>
-                Lakewood Leaders is a community service organization at Lakewood Ranch Highschool. The website manages members and allows for electronic event sign up.
+                A library and guide to converting a Guitar Hero 3 Wii Controller into a wired PC guitar using an Arduino Uno.
                 <CardActions>
                   <RaisedButton
-                    href="https://github.com/ChristopherJMiller/lakewood-leaders"
+                    href="https://github.com/ChristopherJMiller/ArduinoGuitarHero"
                     target="_blank"
-                    label="Github Link"
+                    label="Github"
+                    secondary={false}
+                  />
+                </CardActions>
+                <CardActions className="chip-wrap">
+                  <Chip backgroundColor={blue800} className="chip">
+                    Arduino
+                  </Chip>
+                  <Chip backgroundColor={yellow600} className="chip">
+                    C++
+                  </Chip>
+                </CardActions>
+              </CardText>
+            </Card>
+
+            <Card className="col-md-5 col-sm-12 card-margins-small card-group">
+              <CardTitle title="Miner1.5" subtitle="A remake of a terrible game." />
+              <CardText>
+                A game being developed in the Madd Engine, a homebrewed engine by Realliance.
+                <CardActions>
+                  <RaisedButton
+                    href="https://github.com/realliance/Miner1.5"
+                    target="_blank"
+                    label="Github"
                     secondary={false}
                   />
                   <RaisedButton
-                    href="https://leaders.lrhsclubs.com/"
+                    href="https://github.com/realliance/madd"
                     target="_blank"
-                    label="Website"
-                    secondary={true}
+                    label="Madd Engine Github"
+                    secondary={false}
+                  />
+                </CardActions>
+                <CardActions className="chip-wrap">
+                  <Chip backgroundColor={yellow600} className="chip">
+                    C++
+                  </Chip>
+                </CardActions>
+              </CardText>
+            </Card>
+
+            <Card className="col-md-5 col-sm-12 card-margins-small card-group">
+              <CardTitle title="openService" subtitle="Single Codebase, multiple clubs." />
+              <CardText>
+                The evolution of the Lakewood Leaders Community Service Site. A community service site written with configuration and longevity in mind.
+                <CardActions>
+                  <RaisedButton
+                    href="https://github.com/realliance/openService"
+                    target="_blank"
+                    label="Github"
+                    secondary={false}
                   />
                 </CardActions>
                 <CardActions className="chip-wrap">
@@ -81,6 +125,77 @@ class App extends Component {
                 </CardActions>
               </CardText>
             </Card>
+
+            <Card className="col-md-5 col-sm-12 card-margins-small card-group">
+              <CardTitle title="Dance Maration at FSU Member App" subtitle="Community Service with a hint of cloud." />
+              <CardText>
+                Dance Marathon at FSU is one of the largest Dance Marathon chapters in the state of Florida. This is the ongoing development of a member app in order to stay connected. Of course, all open source.
+                <CardActions>
+                  <RaisedButton
+                    href="https://github.com/ChristopherJMiller/dmfsu-app"
+                    target="_blank"
+                    label="App Github"
+                    secondary={false}
+                  />
+                  <RaisedButton
+                    href="https://github.com/ChristopherJMiller/dmfsu-web"
+                    target="_blank"
+                    label="Control Panel Github"
+                    secondary={false}
+                  />
+                </CardActions>
+                <CardActions className="chip-wrap">
+                  <Chip backgroundColor={red400} className="chip">
+                    Ruby on Rails
+                  </Chip>
+
+                  <Chip backgroundColor={blue300} className="chip">
+                    Docker
+                  </Chip>
+
+                  <Chip backgroundColor={indigo300} className="chip">
+                    Kubernetes
+                  </Chip>
+
+                  <Chip backgroundColor={purple100} className="chip">
+                    React Native
+                  </Chip>
+
+                  <Chip backgroundColor={green500} className="chip">
+                    Google Cloud
+                  </Chip>
+                </CardActions>
+              </CardText>
+            </Card>
+
+            <Card className="col-md-5 col-sm-12 card-margins-small card-group">
+              <CardTitle title="Doggo Factory" subtitle="Bone Tycoon Idling Game" />
+              <CardText>
+                A quick little idling game about a dog's bone making tycoon.
+                <CardActions>
+                  <RaisedButton
+                    href="https://github.com/ChristopherJMiller/doggo-factory"
+                    target="_blank"
+                    label="Github"
+                    secondary={false}
+                  />
+                  <RaisedButton
+                    href="http://chrismiller.xyz/doggo-factory"
+                    target="_blank"
+                    label="Website"
+                    secondary={true}
+                  />
+                </CardActions>
+                <CardActions className="chip-wrap">
+                  <Chip backgroundColor={purple100} className="chip">
+                    React
+                  </Chip>
+                </CardActions>
+              </CardText>
+            </Card>
+
+
+            <h1 className="col-md-8 card-margins-small">Archived Projects</h1>
 
             <Card className="col-md-5 col-sm-12 card-margins-small card-group">
               <CardTitle title="RhyVR" subtitle="VR Drum Rhythm Game" />
@@ -118,29 +233,35 @@ class App extends Component {
               </CardText>
             </Card>
 
-            <h1 className="col-md-8 card-margins-small">Past Projects</h1>
-
             <Card className="col-md-5 col-sm-12 card-margins-small card-group">
-              <CardTitle title="Doggo Factory" subtitle="Bone Tycoon Idling Game" />
+              <CardTitle title="Lakewood Leaders Website" subtitle="Community Service Management" />
               <CardText>
-                A quick little idling game about a dog's bone making tycoon.
+                Lakewood Leaders is a community service organization at Lakewood Ranch Highschool. The website manages members and allows for electronic event sign up. Soon deprecated by the development of openService.
                 <CardActions>
                   <RaisedButton
-                    href="https://github.com/ChristopherJMiller/doggo-factory"
+                    href="https://github.com/ChristopherJMiller/lakewood-leaders"
                     target="_blank"
-                    label="Github"
+                    label="Github Link"
                     secondary={false}
                   />
                   <RaisedButton
-                    href="http://chrismiller.xyz/doggo-factory"
+                    href="https://leaders.lrhsclubs.com/"
                     target="_blank"
                     label="Website"
                     secondary={true}
                   />
                 </CardActions>
                 <CardActions className="chip-wrap">
-                  <Chip backgroundColor={purple100} className="chip">
-                    React
+                  <Chip backgroundColor={red400} className="chip">
+                    Ruby on Rails
+                  </Chip>
+
+                  <Chip backgroundColor={blue300} className="chip">
+                    Docker
+                  </Chip>
+
+                  <Chip backgroundColor={indigo300} className="chip">
+                    Kubernetes
                   </Chip>
                 </CardActions>
               </CardText>

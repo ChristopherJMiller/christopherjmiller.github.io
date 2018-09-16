@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import Button from '@material-ui/core/Button';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
+
+import ReactChartkick, { BarChart } from 'react-chartkick'
+import Chart from 'chart.js'
+ReactChartkick.addAdapter(Chart)
+
+import SkillsStepper from './SkillsStepper'
 
 import CardSection from './Section';
 import {ScrollToTopOnMount, SectionsContainer, Section, Header} from 'react-fullpage';
@@ -19,7 +24,7 @@ class App extends Component {
   render() {
     let options = {
       sectionClassName:     'section',
-      anchors:              ['intro', 'education', 'skills'],
+      anchors:              ['intro', 'education', 'skills', 'projects', 'writing'],
       scrollBar:            false,
       navigation:           true,
       verticalAlign:        false,
@@ -35,6 +40,8 @@ class App extends Component {
           <Button><a href="#intro">Intro</a></Button>
           <Button><a href="#education">Education</a></Button>
           <Button><a href="#skills">Skills</a></Button>
+          <Button><a href="#projects">Projects</a></Button>
+          <Button><a href="#writing">writing</a></Button>
         </Header>
         <SectionsContainer {...options}>
           <Section>
@@ -46,7 +53,7 @@ class App extends Component {
           <CardSection title="Education" background={educationImg}>
             <div style={{ width: '100%', clear: 'both', marginBottom: '6rem'}}><h2 style={{float: 'left'}}>University of Florida</h2><p style={{float: 'right'}}>Aug. 2018 - May. 2022</p></div>
             <p>Pursuing a degree in Computer Engineering (CpE).</p>
-            <h4>Computer Science Class Progess</h4>
+            <h4>Computer Science Class Progress</h4>
             <Stepper activeStep={0}>
               {copSteps.map((label, index) => {
                 const props = {};
@@ -58,7 +65,7 @@ class App extends Component {
                 );
               })}
             </Stepper>
-            <h4>Electrical Engineering Class Progess</h4>
+            <h4>Electrical Engineering Class Progress</h4>
             <Stepper>
               {eelSteps.map((label, index) => {
                 const props = {};
@@ -71,7 +78,13 @@ class App extends Component {
               })}
             </Stepper>
           </CardSection>
-          <CardSection title="Skills" />
+          <CardSection title="Skills">    
+            <SkillsStepper />
+          </CardSection>
+          <CardSection title="Projects" />
+          <Section>
+
+          </Section>
           </SectionsContainer>
         </div>
     );

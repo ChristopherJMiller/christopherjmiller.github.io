@@ -11,6 +11,8 @@ import Chart from 'chart.js'
 ReactChartkick.addAdapter(Chart)
 
 import SkillsStepper from './SkillsStepper'
+import ProjectBoard from './ProjectBoard'
+
 
 import CardSection from './Section';
 import {ScrollToTopOnMount, SectionsContainer, Section, Header} from 'react-fullpage';
@@ -46,8 +48,10 @@ class App extends Component {
         <SectionsContainer {...options}>
           <Section>
             <div className="text-center vertical-center">
-              <h1 className="display-1"><span className="weight-300">Christopher J. </span><span className="weight-700">Miller</span></h1>
-              <h2 className="weight-400">Computer Engineering Student | Software Developer</h2>
+              <div style={{paddingBottom: '10vh'}}>
+                <h1 className="display-1"><span className="weight-300">Christopher J. </span><span className="weight-700">Miller</span></h1>
+                <h2 className="weight-400">Computer Engineering Student | Software Developer</h2>
+              </div>
             </div>
           </Section>
           <CardSection title="Education" background={educationImg}>
@@ -81,7 +85,9 @@ class App extends Component {
           <CardSection title="Skills">    
             <SkillsStepper />
           </CardSection>
-          <CardSection title="Projects" />
+          <Section>
+            <ProjectBoard />
+          </Section>
           <Section>
 
           </Section>

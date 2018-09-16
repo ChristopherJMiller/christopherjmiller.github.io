@@ -23,8 +23,8 @@ class CardSection extends Component {
 
   render() {
     return (
-      <Section>
-        <Card className={`${this.component}`} style={{marginTop: '5vh'}}>
+      <Section className='vertical-center'>
+        <Card className={`${this.component}`}>
           <CardContent>
             <h1 className="weight-300 text-center display-3">{this.props.title}</h1>
             <hr />

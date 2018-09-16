@@ -43,9 +43,6 @@ const skillSteps = [
 ];
 
 const styles = theme => ({
-  root: {
-    maxWidth: '100%'
-  }
 });
 
 class SkillsStepper extends React.Component {
@@ -76,7 +73,7 @@ class SkillsStepper extends React.Component {
     const maxSteps = skillSteps.length;
 
     return (
-      <div className={classes.root}>
+      <div>
         <h1 class='text-center'>{skillSteps[activeStep].label}</h1>
         <SwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}

@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Button from '@material-ui/core/Button';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
 
-import ReactChartkick, { BarChart } from 'react-chartkick'
+import ReactChartkick from 'react-chartkick'
 import Chart from 'chart.js'
 ReactChartkick.addAdapter(Chart)
 

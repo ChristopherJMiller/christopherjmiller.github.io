@@ -19,14 +19,11 @@ import {ScrollToTopOnMount, SectionsContainer, Section, Header} from 'react-full
 
 import educationImg from '../public/images/education.jpg';
 
-const copSteps = ['Programming Fundamentals 1', 'Programming Funamentals 2', 'Intro to Computer Organization', 'Data Structures and Algorithms'];
-const eelSteps = ['Digital Logic and Computer Systems', 'Discrete Structuers', 'Microprocessor Applications'];
-
 class App extends Component {
   render() {
     let options = {
       sectionClassName:     'section',
-      anchors:              ['intro', 'education', 'skills', 'projects', 'writing'],
+      anchors:              ['intro', 'education', 'skills', 'projects'],
       scrollBar:            false,
       navigation:           true,
       verticalAlign:        false,
@@ -43,7 +40,7 @@ class App extends Component {
           <Button><a href="#education">Education</a></Button>
           <Button><a href="#skills">Skills</a></Button>
           <Button><a href="#projects">Projects</a></Button>
-          <Button><a href="#writing">writing</a></Button>
+          <Button><a target="_blank" href="http://chrismiller.xyz/Resume/resume.pdf">Resume</a></Button>
         </Header>
         <SectionsContainer {...options}>
           <Section>
@@ -57,39 +54,16 @@ class App extends Component {
           <CardSection title="Education" background={educationImg}>
             <div style={{ width: '100%', clear: 'both', marginBottom: '6rem'}}><h2 style={{float: 'left'}}>University of Florida</h2><p style={{float: 'right'}}>Aug. 2018 - May. 2022</p></div>
             <p>Pursuing a degree in Computer Engineering (CpE).</p>
-            <h4>Computer Science Class Progress</h4>
-            <Stepper activeStep={0}>
-              {copSteps.map((label, index) => {
-                const props = {};
-                const labelProps = {};
-                return (
-                  <Step key={label} {...props}>
-                    <StepLabel {...labelProps}>{label}</StepLabel>
-                  </Step>
-                );
-              })}
-            </Stepper>
-            <h4>Electrical Engineering Class Progress</h4>
-            <Stepper>
-              {eelSteps.map((label, index) => {
-                const props = {};
-                const labelProps = {};
-                return (
-                  <Step key={label} {...props}>
-                    <StepLabel {...labelProps}>{label}</StepLabel>
-                  </Step>
-                );
-              })}
-            </Stepper>
+            <h4>Computer Science Classes</h4>
+            <ul>
+              <li>Programming Fundamentals 1</li>
+            </ul>
           </CardSection>
           <CardSection title="Skills">    
             <SkillsStepper />
           </CardSection>
           <Section>
             <ProjectBoard />
-          </Section>
-          <Section>
-
           </Section>
           </SectionsContainer>
         </div>

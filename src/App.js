@@ -33,11 +33,11 @@ class App extends Component {
       <div>
         <ScrollToTopOnMount />
         <Header>
-          <Button><a href="#intro">Intro</a></Button>
-          <Button><a href="#education">Education</a></Button>
-          <Button><a href="#skills">Skills</a></Button>
-          <Button><a href="#projects">Projects</a></Button>
-          <Button><a target="_blank" href="http://chrismiller.xyz/Resume/resume.pdf">Resume</a></Button>
+        <a href="#intro"><Button>Intro</Button></a>
+          <a href="#education"><Button>Education</Button></a>
+          <a href="#skills"><Button>Skills</Button></a>
+          <a href="#projects"><Button>Projects</Button></a>
+          <a target="_blank" href="http://chrismiller.xyz/Resume/resume.pdf"><Button>Resume</Button></a>
         </Header>
         <SectionsContainer {...options}>
           <Section>

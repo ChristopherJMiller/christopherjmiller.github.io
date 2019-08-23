@@ -50,10 +50,18 @@ class App extends Component {
           </Section>
           <CardSection title="Education" background={educationImg}>
             <div style={{ width: '100%', clear: 'both', marginBottom: '6rem'}}><h2 style={{float: 'left'}}>University of Florida</h2><p style={{float: 'right'}}>Aug. 2018 - May. 2022</p></div>
-            <p>Pursuing a degree in Computer Engineering (CpE).</p>
-            <h4>Computer Science Classes</h4>
+            <p>Pursuing a degree in Computer Engineering (CpE).<br />GPA: 3.91</p>
+            <h4>Applicable Classes</h4>
             <ul>
               <li>Programming Fundamentals 1</li>
+              <li>Programming Fundamentals 2</li>
+              <li>Applications of Discrete Structures</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Introduction to Computer Organization</li>
+              <li>Digital Logic and Computer Systems</li>
+              <li>Information and Database Systems 1</li>
+              <li>Introduction to Signals and Systems</li>
+              <li>Computational Linear Algebra</li>
             </ul>
           </CardSection>
           <CardSection title="Skills">    

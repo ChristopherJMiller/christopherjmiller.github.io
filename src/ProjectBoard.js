@@ -40,7 +40,27 @@ const cPlusPlusChip = {
   color: 'default'
 }
 
+const javascriptChip = {
+  text: 'Javascript',
+  color: 'secondary'
+}
+
 const projects = [
+  {
+    title: 'Survey of Polysubstance Drug Abuse',
+    description: 'Project Manager for the University of Florida study on polysubstance drug abuse. App was developed using web-ready languages with electron.',
+    tags: [
+      javascriptChip,
+      desktopChip
+    ]
+  },
+  {
+    title: 'PicFo',
+    description: 'Front End Lead on a startup phone app based around customizable photo frames and networking.',
+    tags: [
+      javascriptChip
+    ]
+  },
   {
     title: 'openService',
     description: 'An open source community service platform with the goal of giving power back to the users.',
@@ -48,25 +68,6 @@ const projects = [
     tags: [
       webChip,
       railsChip
-    ]
-  },
-  {
-    title: 'The Dungeon',
-    description: 'Creating a dungeon crawler as part of the Fall 2018 ACE Video Game Design Team.',
-    link: 'https://github.com/UF-ACE/TheDungeon',
-    tags: [
-      desktopChip,
-      unityChip
-    ]
-  },
-  {
-    title: 'HueHub',
-    description: 'Custom interfacing for the Philips Hue Bridge, allowing for Raspberry Pi slaves to acts similarly to lights.',
-    link: 'https://github.com/ChristopherJMiller/huehub',
-    tags: [
-      webChip,
-      railsChip,
-      pythonChip
     ]
   },
   {
@@ -139,7 +140,7 @@ class ProjectBoard extends Component {
                 ))}
               </CardContent>
               <CardActions>
-                <Button component="a" href={project.link} size="small">Github</Button>
+                {project.link ? <Button component="a" href={project.link} size="small">Github</Button> : null}
               </CardActions>
             </Card>
           ))}

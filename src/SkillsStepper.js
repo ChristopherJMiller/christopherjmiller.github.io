@@ -12,11 +12,10 @@ const skillSteps = [
     label: 'Programming',
     data: [
       ['Python', 40],
-      ['C#', 50],
-      ['Java', 75],
-      ['Node.js', 85],
+      ['C++', 60],
+      ['Java', 70],
       ['Ruby', 75],
-      ['Javascript', 85]
+      ['Javascript / Node.js', 85]
     ]
   },
   {
@@ -25,6 +24,7 @@ const skillSteps = [
       ['Express', 40],
       ['Ruby on Rails', 85],
       ['React', 75],
+      ['Material UI', 80],
       ['Bootstrap', 100],
       ['Semantic UI', 80]
     ]

@@ -25,11 +25,6 @@ const railsChip = {
   color: 'default'
 }
 
-const pythonChip = {
-  text: 'Python',
-  color: 'default'
-}
-
 const unityChip = {
   text: 'Unity3D',
   color: 'default'
